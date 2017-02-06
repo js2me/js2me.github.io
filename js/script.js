@@ -53,6 +53,8 @@ $(document).ready(function() {
 				onLeave: function(index, nextIndex, direction){
 					var currentPage = scrollParts[nextIndex-1];
 					currentPage.classList.add('viewed');
+					header.classList.remove('opened');
+					headerFullShowed =false;
 					if(nextIndex == 1){
 						header.classList.remove('full-show');
 					}else{

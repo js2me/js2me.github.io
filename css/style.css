@@ -74,9 +74,9 @@ button.show-menu {
 	display: none;
 	margin-top: .8vh;
 	height: auto;
-	width: 17% !important;
+	width: 8vmax !important;
 	/* max-width: 8.5%; */
-	margin-top: 5%;
+	margin-top: 1.5vmax;
 	/* max-height: 90%; */
 	float: right;
 	border-radius: .5em;
@@ -190,7 +190,7 @@ button.show-menu > svg{
 .header.full-show .menu,.header:not(.opened).full-show .logo{
 	height: 100%;
 }
-.header.full-show .menu{
+.header:not(.opened).full-show .menu{
 	padding: 0 2em;
 }
 
@@ -369,6 +369,8 @@ button.learn-more:active {
 		margin-left: 4.1%;
 		margin-right: 4%;
 		margin-top: 4%;
+		margin-bottom: 4%;
+		max-width: 25%;
 		border: 1px solid rgba(0, 0, 0, 0.15);
 	}
 	button.down-arrow-button {
@@ -492,6 +494,12 @@ button.learn-more:active {
 				padding: .6em 2.3em;
 			}
 		}
+		.what-included .row.content > div{
+			max-width: 90%;
+			/* max-height: 90%; */
+			transform: scale(1,1) !important;
+			margin-bottom: 7%;
+		}
 		.logo{
 			background-size: contain !important;
 		}
@@ -507,6 +515,9 @@ button.learn-more:active {
 		.show-menu{
 			display: block !important;
 			/* margin-left: auto; */
+		}
+		.what-gets .row > div {
+			padding: 1% 7%;
 		}
 
 	}
@@ -610,8 +621,12 @@ audio, canvas, progress, video {
 			padding: 0 4% 6%;
 		}
 		h2.title {
-			font-size: 4vmax;
+			font-size: 6vmax;
+			word-wrap: break-word;
 			padding-top: 20%;
+			padding-left: 5%;
+			word-break: break-word;
+			padding-right: 5%;
 		}
 		.for-whom {
 			height: 100% !important;
@@ -674,7 +689,7 @@ audio, canvas, progress, video {
 							/*}*/
 
 							.what-included .row.content > div {
-								max-width: 25%;
+								/* max-width: 25%; */
 							}
 						}
 
@@ -692,6 +707,6 @@ audio, canvas, progress, video {
 .opened .menu-item {
     display: block !important;
     width: 100%;
-    font-size: 200%;
+    font-size: 2.8vmax;
     text-align: right;
 }
