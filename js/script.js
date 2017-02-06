@@ -15,10 +15,21 @@ var socialNetwork ={
 function openSocialNetwork(sNetwork){
 	window.open(socialNetwork[sNetwork]);
 };
+function showMenu(){
+	if(!headerFullShowed){
+		header.classList.add('opened');
+	}else{
+		header.classList.remove('opened');
+	}
+	headerFullShowed = !headerFullShowed;
+};
+var header,
+		scrollParts,
+		headerFullShowed = false;
 $(document).ready(function() {
 	// var fullPageConfig = ;
-	var menuClassList = document.getElementById('header').classList;
-	var scrollParts = document.getElementsByClassName('scroll-part');
+	header = document.getElementById('header');
+	scrollParts = document.getElementsByClassName('scroll-part');
 	console.log(fullPageAnchors.length,'fff ', scrollParts.length);
 	$('#scroll').fullpage({
 				verticalCentered: true,
@@ -39,9 +50,9 @@ $(document).ready(function() {
 					var currentPage = scrollParts[nextIndex-1];
 					currentPage.classList.add('viewed');
 					if(nextIndex == 1){
-						menuClassList.remove('full-show');
+						header.classList.remove('full-show');
 					}else{
-						menuClassList.add('full-show');
+						header.classList.add('full-show');
 					}
 				},
 			});

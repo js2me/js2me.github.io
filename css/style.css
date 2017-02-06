@@ -73,10 +73,11 @@ body{
 button.show-menu {
 	display: none;
 	margin-top: .8vh;
-	height: 50px;
-	width: 50px;
+	height: auto;
+	width: 17% !important;
 	/* max-width: 8.5%; */
-	max-height: 90%;
+	margin-top: 5%;
+	/* max-height: 90%; */
 	float: right;
 	border-radius: .5em;
 	border: none;
@@ -97,7 +98,7 @@ button.show-menu > svg{
 	left: 0;
 	z-index: 1;
 	/* width: 1140px; */
-	margin: 2% auto;
+	margin: 0 auto;
 	/*margin-left: auto;*/
 	/*margin-right: auto;*/
 	padding: 0;
@@ -118,7 +119,7 @@ button.show-menu > svg{
 .logo{
 	background:url(../images/white-logo.png) no-repeat center center;
 }
-.header.full-show .logo{
+.header.full-show .logo,.header.opened .logo{
 	background:url(../images/black-logo.png) no-repeat center center;
 
 }
@@ -169,7 +170,7 @@ button.show-menu > svg{
 .header:not(.full-show) .menu-item.active,.menu-item.register {
 	background: #d32f2f;
 }
-.header.full-show .menu-item:not(.register) a{
+.header.full-show .menu-item:not(.register) a,.header.opened .menu-item:not(.register) a{
 	color: rgb(77, 77, 77);
 	font-family: RobotoRegular;
 }
@@ -186,7 +187,7 @@ button.show-menu > svg{
 	animation-duration: 1s;
 	box-shadow: -10px 1px 1em rgba(0, 0, 0, 0.31);
 }
-.header.full-show .menu,.header.full-show .logo{
+.header.full-show .menu,.header:not(.opened).full-show .logo{
 	height: 100%;
 }
 .header.full-show .menu{
@@ -229,7 +230,7 @@ section.company-info {
 	font-size: 1.5669em;
 	padding: 0 4% 9%;
 }
-.full-show path#svg_1 {
+.full-show path#svg_1,.opened path#svg_1 {
 	fill: #d32f2f;
 }
 
@@ -441,13 +442,11 @@ button.learn-more:active {
 		transform: translateY(-0.1em);
 	}
 
-
-
-
-
-
-
-
+	.header.opened {
+    height: 100% !important;
+    z-index: 99;
+    background-color: #ffffff;
+}
 
 
 
@@ -502,7 +501,7 @@ button.learn-more:active {
 		.header.full-show {
 			height: 15vh;
 		}
-		.menu{
+		.header:not(.opened) .menu{
 			display:none;
 		}
 		.show-menu{
@@ -678,3 +677,21 @@ audio, canvas, progress, video {
 								max-width: 25%;
 							}
 						}
+
+.opened .menu {
+    position: absolute;
+    bottom: 0;
+    /* left: 0; */
+    display: flex;
+    right: 0;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+}
+
+.opened .menu-item {
+    display: block !important;
+    width: 100%;
+    font-size: 200%;
+    text-align: right;
+}
