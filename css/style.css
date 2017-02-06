@@ -48,7 +48,7 @@ body{
 	transform: scale(1,1);
 }
 .scroll-part:not(:first-child) h2.title{
-	transition: transform .3s ease-out,opacity .4s ease-out;
+	/*transition: transform .3s ease-out,opacity .4s ease-out;*/
 	transform: scale(0.8,0.8);
 	opacity: 0;
 }
@@ -104,7 +104,7 @@ button.show-menu > svg{
 	/* padding: 7% .5em; */
 	/*padding-left: .5em;*/
 	/*padding-right: .5em;*/
-	transition: height .6s ease-out;
+	/*transition: height .6s ease-out;*/
 }
 .menu,.logo{
 	padding: 0;
@@ -145,7 +145,7 @@ button.show-menu > svg{
 	/* white-space: nowrap; */
 	display: flex;
 	align-items: center;
-	transition: all .4s ease;
+	/*transition: all .4s ease;*/
 	justify-content: flex-end;
 }
 
@@ -164,7 +164,7 @@ button.show-menu > svg{
 	text-decoration: none;
 	color: white;
 	border-bottom:1px solid rgba(0, 0, 0, 0);
-	transition:all .4s ease;
+	/*transition:all .4s ease;*/
 }
 .header:not(.full-show) .menu-item.active,.menu-item.register {
 	background: #d32f2f;
@@ -403,9 +403,9 @@ button.learn-more:active {
 	}
 
 	.full-height-page{
-		min-height: 100%;
-		height: auto !important;
-		padding-bottom: 5%;
+		/* min-height: 100%; */
+		/* height: auto !important; */
+		/* padding-bottom: 5%; */
 	}
 	.what-gets .row > div {
 		padding: 0 5%;
@@ -424,9 +424,9 @@ button.learn-more:active {
 		color: #d32f2f;
 	}
 	.row.content.speaker-info {
-		transform: translateY(20em);
+		transform: translateY(35em);
 		opacity: 0;
-		transition: all .3s ease-out;
+		transition: all .8s ease-out;
 	}
 
 	.viewed .row.content.speaker-info {
@@ -514,7 +514,15 @@ button.learn-more:active {
 	section.course-info,section.who-conduct {
 		box-shadow: none;
 	}
-	
+	.company-info .description {
+	    font-family: RobotoRegular;
+	    /* text-align: left; */
+	    /* max-width: 50%; */
+	    /* line-height: 2em; */
+	    /* padding: 8% 0; */
+	    /* word-wrap: initial; */
+	    white-space: pre-line;
+	}
 
 
 

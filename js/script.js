@@ -13,7 +13,6 @@ var socialNetwork ={
 	'facebook':'https://www.facebook.com/rtop.ru/',
 }
 function openSocialNetwork(sNetwork){
-	// alert(sNetwork);
 	window.open(socialNetwork[sNetwork]);
 };
 $(document).ready(function() {
@@ -22,15 +21,15 @@ $(document).ready(function() {
 	var scrollParts = document.getElementsByClassName('scroll-part');
 	console.log(fullPageAnchors.length,'fff ', scrollParts.length);
 	$('#scroll').fullpage({
-		verticalCentered: false,
+				verticalCentered: true,
 				// navigation:true,
-				lazyLoading:false,
-				css3:true,
+				// lazyLoading:false,
+				// css3:false,
 				// sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
-				autoScrolling: false,
-
-				fitToSection:false,
-				scrollingSpeed: 1000,
+				// autoScrolling: false,
+				scrollOverflow:true,
+				// fitToSection:false,
+				// scrollingSpeed: 700,
 				sectionSelector: '.scroll-part',
 				menu: '#menu',
 				// normalScrollElements: '.who-conduct .company-info .course-info',
