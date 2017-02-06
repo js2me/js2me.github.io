@@ -12,9 +12,11 @@ var socialNetwork ={
 	'vk':'https://vk.com/rtop_studio',
 	'facebook':'https://www.facebook.com/rtop.ru/',
 }
+
 function openSocialNetwork(sNetwork){
 	window.open(socialNetwork[sNetwork]);
 };
+
 function showMenu(){
 	if(!headerFullShowed){
 		header.classList.add('opened');
@@ -23,9 +25,11 @@ function showMenu(){
 	}
 	headerFullShowed = !headerFullShowed;
 };
+
 var header,
 		scrollParts,
 		headerFullShowed = false;
+
 $(document).ready(function() {
 	// var fullPageConfig = ;
 	header = document.getElementById('header');
