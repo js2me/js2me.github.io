@@ -473,15 +473,29 @@ audio, canvas, progress, video {
 #background-video {
     position: fixed;
     transform: scale(1,1.05);
-    right: 0;
     bottom: 0;
     top: 0;
     right: 0;
     width: 100%;
     height: 100%;
+    filter: contrast(150%);
     background-size: 100% 100%;
     object-fit: cover; /*cover video background */
     z-index: -1;
+}
+.background-gif {
+    position: fixed;
+    transform: scale(1,1.07);
+    bottom: 0;
+    top: -30px;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    object-fit: cover;
+    z-index: -1;
+    background: url(../video/background1.gif);
+    background-size: cover;
 }
 
 /* Extra Small Devices, Phones */
@@ -595,5 +609,11 @@ audio, canvas, progress, video {
 @media only screen and (max-width: 1476px) {
     #background-video{
         transform: scale(1,1.12);
+    }
+}
+@media only screen and (max-width: 1400px) {
+    .background-gif{
+        transform: scale(1,1.12);
+        top: -2px;
     }
 }
