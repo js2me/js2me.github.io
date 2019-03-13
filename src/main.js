@@ -10,11 +10,11 @@ document.body.onload = () => {
 
   const handleOnBodyScroll = () => {
     const scrollPercent = getScrollPercentage()
+    const headerContentY = -40 + scrollPercent * 10
     changeStylesFor(
-      'header',
+      '.header-content',
       'transform',
-      `scale(${1.3 -
-        (scrollPercent / 100 > 0.31 ? 0.31 : scrollPercent / 100)})`
+      `translate(-40%, ${headerContentY > 90 ? 90 : headerContentY}%)`
     )
   }
 
@@ -32,6 +32,5 @@ document.body.onload = () => {
     }
   }
 
-  changeStylesFor('body', 'overflow-y', 'overlay')
   handleOnBodyScroll()
 }
