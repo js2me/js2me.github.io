@@ -7,8 +7,7 @@
     "webpack": "node_modules/.bin/webpack",
     "lint-js-fix": "yarn lint-js --fix",
     "lint-js": "eslint .",
-    "build-prod": "yarn webpack --config webpack.config.js -p",
-    "postinstall": "node postinstall.js"
+    "build-prod": "yarn webpack --config webpack.config.js -p"
   },
   "keywords": [],
   "author": "Sergey Volkov",
@@ -41,7 +40,7 @@
     "babel-preset-env": "1.7.0",
     "babel-preset-es2015": "6.24.1",
     "babel-runtime": "6.26.0",
-    "css-loader": "1.0.0",
+    "css-loader": "0.28.11",
     "eslint": "4.18.0",
     "eslint-config-prettier": "2.9.0",
     "eslint-config-standard": "11.0.0",
