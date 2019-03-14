@@ -12,15 +12,29 @@ document.body.onload = () => {
     const scrollPercent = getScrollPercentage()
     const percentageX10 = scrollPercent * 10
     const headerContentY = -40 + percentageX10
-    changeStylesFor(
-      '.header-content',
-      { transform: `translate(-40%, ${headerContentY > 90 ? 90 : headerContentY}%)` }
-    )
-    changeStylesFor('.title.about-me', {
-      transform: `translateY(${percentageX10 > 100 ? 100 : percentageX10}px)`,
-      color: percentageX10 > 49 ? '#565656' : '#fff',
-      fontSize: `${26 + (scrollPercent) > 52 ? 52 : 26 + (scrollPercent)}px`,
+    changeStylesFor('.header-content', {
+      transform: `translate(-40%, ${
+        headerContentY > 90 ? 90 : headerContentY
+      }%)`,
     })
+    changeStylesFor('.title.about-me', {
+      transform: `translateY(${percentageX10 > 120 ? 120 : percentageX10}px)`,
+      color: scrollPercent > 5 ? '#565656' : '#fff',
+      fontSize: `${26 + scrollPercent > 52 ? 52 : 26 + scrollPercent}px`,
+    })
+    if (scrollPercent > 42) {
+      const fixedScrollPercent = scrollPercent - 42
+      const fixedScrollPercentX10 = fixedScrollPercent * 10
+      changeStylesFor('.title.projects', {
+        transform: `translateY(${
+          fixedScrollPercent > 12 ? 120 : fixedScrollPercentX10
+        }px)`,
+        color: fixedScrollPercent > 2.3 ? '#fff' : '#565656',
+        fontSize: `${
+          26 + fixedScrollPercent > 52 ? 52 : 26 + fixedScrollPercent
+        }px`,
+      })
+    }
   }
 
   document.body.addEventListener('scroll', handleOnBodyScroll)
@@ -34,7 +48,7 @@ document.body.onload = () => {
       cachedElements[query] || setToCache(document.querySelector(query), query)
     if (el) {
       const keys = Object.keys(changes)
-      for(const key of keys){
+      for (const key of keys) {
         el.style[key] = changes[key]
       }
     }
