@@ -37,6 +37,10 @@ const cssConfig = {
         use: 'css-loader?minimize=true',
       }),
     },
+    {
+      test: /\.jpg$/,
+      loader: 'file-loader',
+    },
   ],
   plugins: [
     new ExtractTextPlugin('[name]css'), // css file will override generated js file
@@ -60,8 +64,8 @@ function createBuildConfig(path, isForJsFiles) {
 }
 
 module.exports = [
-  createBuildConfig('./app/', true),
-  createBuildConfig('./app/scripts/', true),
-  createBuildConfig('./app/'),
-  createBuildConfig('./app/styles/'),
+  createBuildConfig('./src/', true),
+  // createBuildConfig('./app/scripts/', true),
+  createBuildConfig('./src/'),
+  // createBuildConfig('./src/styles/'),
 ]
