@@ -69,6 +69,28 @@ section {
   transform-style: inherit;
 }
 
+section .title {
+  position: absolute;
+  top: -8%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  z-index: 100000;
+}
+section .title.dark {
+  color: #565656;
+}
+
+section .title.bottom-aligned {
+  top: auto;
+  bottom: 2%;
+}
+
 .section1 {
   background: #fafafa;
   box-shadow: 0 0 20px #333;
